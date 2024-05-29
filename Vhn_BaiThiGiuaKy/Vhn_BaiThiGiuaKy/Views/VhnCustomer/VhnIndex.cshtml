@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Vhn_BaiThiGiuaKy.Models.VhnCustomer>
+
+@{
+    ViewBag.Title = "Vhn: Danh sach thong tin";
+}
+
+<h2>Danh sach thong tin</h2>
+
+<p>
+    @Html.ActionLink("Create New", "VhnCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model._2210900050_Cusid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vhn_Fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vhn_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vhn_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vhn_Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vhn_Balance)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item._2210900050_Cusid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vhn_Fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vhn_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vhn_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vhn_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vhn_Balance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
