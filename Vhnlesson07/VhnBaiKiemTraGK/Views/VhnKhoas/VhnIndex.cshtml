@@ -1,0 +1,39 @@
+﻿@model IEnumerable<VhnBaiKiemTraGK.Models.vhnKhoa>
+
+@{
+    ViewBag.Title = "VhnIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("VHN: Create New", "VhnCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnTenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnTrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnTenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnTrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("VHN:Edit", "VhnEdit", new { id=item.VhnMaKH.Trim() }) |
+            @Html.ActionLink("VHN:Details", "VhnDetails", new { id=item.VhnMaKH.Trim() }) |
+            @Html.ActionLink("VHN:Delete", "VhnDelete", new { id=item.VhnMaKH.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

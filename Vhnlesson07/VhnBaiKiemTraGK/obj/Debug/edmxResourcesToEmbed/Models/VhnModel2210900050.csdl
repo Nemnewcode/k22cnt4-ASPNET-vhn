@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VhnK22CNT4lesson07DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="vhnKhoa">
+    <Key>
+      <PropertyRef Name="VhnMaKH" />
+    </Key>
+    <Property Name="VhnMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="VhnTenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnTrangThai" Type="Boolean" />
+    <NavigationProperty Name="vhnSinhVien" Relationship="VhnK22CNT4lesson07DbModel.FK_vhnSinhVien_vhnKhoa" FromRole="vhnKhoa" ToRole="vhnSinhVien" />
+  </EntityType>
+  <EntityType Name="vhnSinhVien">
+    <Key>
+      <PropertyRef Name="VhnMaSV" />
+    </Key>
+    <Property Name="VhnMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VhnHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnNgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="VhnPhai" Type="Boolean" />
+    <Property Name="VhnPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="VhnEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="vhnKhoa" Relationship="VhnK22CNT4lesson07DbModel.FK_vhnSinhVien_vhnKhoa" FromRole="vhnSinhVien" ToRole="vhnKhoa" />
+  </EntityType>
+  <EntityContainer Name="VhnK22CNT4lesson07DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="vhnKhoa" EntityType="Self.vhnKhoa" />
+    <EntitySet Name="vhnSinhVien" EntityType="Self.vhnSinhVien" />
+    <AssociationSet Name="FK_vhnSinhVien_vhnKhoa" Association="VhnK22CNT4lesson07DbModel.FK_vhnSinhVien_vhnKhoa">
+      <End Role="vhnKhoa" EntitySet="vhnKhoa" />
+      <End Role="vhnSinhVien" EntitySet="vhnSinhVien" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_vhnSinhVien_vhnKhoa">
+    <End Type="VhnK22CNT4lesson07DbModel.vhnKhoa" Role="vhnKhoa" Multiplicity="0..1" />
+    <End Type="VhnK22CNT4lesson07DbModel.vhnSinhVien" Role="vhnSinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vhnKhoa">
+        <PropertyRef Name="VhnMaKH" />
+      </Principal>
+      <Dependent Role="vhnSinhVien">
+        <PropertyRef Name="VhnMaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
