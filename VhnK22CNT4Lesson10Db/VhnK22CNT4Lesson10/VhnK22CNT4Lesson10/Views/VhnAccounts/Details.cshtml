@@ -1,0 +1,67 @@
+﻿@model VhnK22CNT4Lesson10.Models.VhnAccount
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_VhnLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VhnAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnActive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VhnID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VhnCNT4Lesson10DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="VhnAccount">
+    <Key>
+      <PropertyRef Name="VhnID" />
+    </Key>
+    <Property Name="VhnID" Type="Int32" Nullable="false" />
+    <Property Name="VhnUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VhnActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="VhnCNT4Lesson10DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="VhnAccount" EntityType="Self.VhnAccount" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VhnCNT4Lesson10DbModelStoreContainer" CdmEntityContainer="VhnCNT4Lesson10DbEntities">
+    <EntitySetMapping Name="VhnAccount">
+      <EntityTypeMapping TypeName="VhnCNT4Lesson10DbModel.VhnAccount">
+        <MappingFragment StoreEntitySet="VhnAccount">
+          <ScalarProperty Name="VhnID" ColumnName="VhnID" />
+          <ScalarProperty Name="VhnUserName" ColumnName="VhnUserName" />
+          <ScalarProperty Name="VhnPassword" ColumnName="VhnPassword" />
+          <ScalarProperty Name="VhnFullName" ColumnName="VhnFullName" />
+          <ScalarProperty Name="VhnEmail" ColumnName="VhnEmail" />
+          <ScalarProperty Name="VhnPhone" ColumnName="VhnPhone" />
+          <ScalarProperty Name="VhnActive" ColumnName="VhnActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
