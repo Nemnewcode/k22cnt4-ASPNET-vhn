@@ -1,0 +1,46 @@
+﻿@model IEnumerable<VhnK22CNT4Lesson11_2210900050.Models.VhnCategory>
+
+@{
+    ViewBag.Title = "Danh muc san pham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh muc san pham</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnCateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.VhnID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VhnCateName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VhnStatus)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.VhnID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.VhnID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.VhnID })
+    </td>
+</tr>
+}
+
+</table>

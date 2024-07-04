@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VhnK22CNT4Lesson11DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="VhnCategory">
+    <Key>
+      <PropertyRef Name="VhnID" />
+    </Key>
+    <Property Name="VhnID" Type="int" Nullable="false" />
+    <Property Name="VhnCateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="VhnStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="VhnProduct">
+    <Key>
+      <PropertyRef Name="VhnID2210900050" />
+    </Key>
+    <Property Name="VhnID2210900050" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VhnProName" Type="nvarchar" MaxLength="50" />
+    <Property Name="VhnQty" Type="int" />
+    <Property Name="VhnPrice" Type="float" />
+    <Property Name="VhnCateid" Type="int" />
+    <Property Name="VhnActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="VhnK22CNT4Lesson11DbModelStoreContainer">
+    <EntitySet Name="VhnCategory" EntityType="Self.VhnCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VhnProduct" EntityType="Self.VhnProduct" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

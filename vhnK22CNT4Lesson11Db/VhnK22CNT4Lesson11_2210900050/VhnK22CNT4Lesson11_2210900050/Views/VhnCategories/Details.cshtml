@@ -1,0 +1,35 @@
+﻿@model VhnK22CNT4Lesson11_2210900050.Models.VhnCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VhnCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnCateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnCateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VhnStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VhnStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VhnID }) |
+    @Html.ActionLink("Back to List", "VhnIndex")
+</p>

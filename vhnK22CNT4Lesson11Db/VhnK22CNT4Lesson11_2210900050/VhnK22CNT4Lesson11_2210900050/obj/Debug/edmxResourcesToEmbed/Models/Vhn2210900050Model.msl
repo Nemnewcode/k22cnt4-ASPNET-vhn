@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VhnK22CNT4Lesson11DbModelStoreContainer" CdmEntityContainer="VhnK22CNT4Lesson11DbEntities">
+    <EntitySetMapping Name="VhnCategory">
+      <EntityTypeMapping TypeName="VhnK22CNT4Lesson11DbModel.VhnCategory">
+        <MappingFragment StoreEntitySet="VhnCategory">
+          <ScalarProperty Name="VhnID" ColumnName="VhnID" />
+          <ScalarProperty Name="VhnCateName" ColumnName="VhnCateName" />
+          <ScalarProperty Name="VhnStatus" ColumnName="VhnStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VhnProduct">
+      <EntityTypeMapping TypeName="VhnK22CNT4Lesson11DbModel.VhnProduct">
+        <MappingFragment StoreEntitySet="VhnProduct">
+          <ScalarProperty Name="VhnID2210900050" ColumnName="VhnID2210900050" />
+          <ScalarProperty Name="VhnProName" ColumnName="VhnProName" />
+          <ScalarProperty Name="VhnQty" ColumnName="VhnQty" />
+          <ScalarProperty Name="VhnPrice" ColumnName="VhnPrice" />
+          <ScalarProperty Name="VhnCateid" ColumnName="VhnCateid" />
+          <ScalarProperty Name="VhnActive" ColumnName="VhnActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

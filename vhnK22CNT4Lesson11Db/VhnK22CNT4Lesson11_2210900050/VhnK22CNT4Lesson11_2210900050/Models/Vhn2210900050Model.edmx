@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VhnK22CNT4Lesson11DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="VhnCategory">
+          <Key>
+            <PropertyRef Name="VhnID" />
+          </Key>
+          <Property Name="VhnID" Type="int" Nullable="false" />
+          <Property Name="VhnCateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="VhnStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="VhnProduct">
+          <Key>
+            <PropertyRef Name="VhnID2210900050" />
+          </Key>
+          <Property Name="VhnID2210900050" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="VhnProName" Type="nvarchar" MaxLength="50" />
+          <Property Name="VhnQty" Type="int" />
+          <Property Name="VhnPrice" Type="float" />
+          <Property Name="VhnCateid" Type="int" />
+          <Property Name="VhnActive" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="VhnK22CNT4Lesson11DbModelStoreContainer">
+          <EntitySet Name="VhnCategory" EntityType="Self.VhnCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VhnProduct" EntityType="Self.VhnProduct" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VhnK22CNT4Lesson11DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="VhnCategory">
+          <Key>
+            <PropertyRef Name="VhnID" />
+          </Key>
+          <Property Name="VhnID" Type="Int32" Nullable="false" />
+          <Property Name="VhnCateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VhnStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="VhnProduct">
+          <Key>
+            <PropertyRef Name="VhnID2210900050" />
+          </Key>
+          <Property Name="VhnID2210900050" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VhnProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VhnQty" Type="Int32" />
+          <Property Name="VhnPrice" Type="Double" />
+          <Property Name="VhnCateid" Type="Int32" />
+          <Property Name="VhnActive" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="VhnK22CNT4Lesson11DbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="VhnCategory" EntityType="Self.VhnCategory" />
+          <EntitySet Name="VhnProduct" EntityType="Self.VhnProduct" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VhnK22CNT4Lesson11DbModelStoreContainer" CdmEntityContainer="VhnK22CNT4Lesson11DbEntities">
+          <EntitySetMapping Name="VhnCategory">
+            <EntityTypeMapping TypeName="VhnK22CNT4Lesson11DbModel.VhnCategory">
+              <MappingFragment StoreEntitySet="VhnCategory">
+                <ScalarProperty Name="VhnID" ColumnName="VhnID" />
+                <ScalarProperty Name="VhnCateName" ColumnName="VhnCateName" />
+                <ScalarProperty Name="VhnStatus" ColumnName="VhnStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VhnProduct">
+            <EntityTypeMapping TypeName="VhnK22CNT4Lesson11DbModel.VhnProduct">
+              <MappingFragment StoreEntitySet="VhnProduct">
+                <ScalarProperty Name="VhnID2210900050" ColumnName="VhnID2210900050" />
+                <ScalarProperty Name="VhnProName" ColumnName="VhnProName" />
+                <ScalarProperty Name="VhnQty" ColumnName="VhnQty" />
+                <ScalarProperty Name="VhnPrice" ColumnName="VhnPrice" />
+                <ScalarProperty Name="VhnCateid" ColumnName="VhnCateid" />
+                <ScalarProperty Name="VhnActive" ColumnName="VhnActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

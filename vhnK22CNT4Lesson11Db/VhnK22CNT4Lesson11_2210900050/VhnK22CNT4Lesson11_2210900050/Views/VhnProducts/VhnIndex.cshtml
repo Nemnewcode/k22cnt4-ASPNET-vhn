@@ -1,0 +1,64 @@
+﻿@model IEnumerable<VhnK22CNT4Lesson11_2210900050.Models.VhnProduct>
+
+@{
+    ViewBag.Title = "Danh sach san pham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sach san pham</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnID2210900050)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnProName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnCateid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VhnActive)
+        </th>
+        <th>chuc nang</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnID2210900050)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnProName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnCateid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VhnActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VhnID2210900050 }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VhnID2210900050 }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VhnID2210900050 })
+        </td>
+    </tr>
+}
+
+</table>
